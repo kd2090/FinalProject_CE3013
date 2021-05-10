@@ -2,8 +2,11 @@
 This Construction Management python code takes into account multiple variables and conditons to create cost estimate ranges for the cost of construction for a building. 
 
 The variables include the type of building:
-    (Residential, Commercial and Industrial) 
-Building use: 
+
+    (Residential, Commercial, Industrial) 
+    
+Building use:
+
     Residential: Single Dwelling or Multifamily
     Commercial: Office, Restaurant, Retail
     Industrial: Heavy or Light Industry

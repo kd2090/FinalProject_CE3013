@@ -1,21 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
-
 #Final Project for Computing (Sarah & Krystian)
-
-
-# In[3]:
-
-
 import numpy as np 
 from tabulate import tabulate #to create the table
-
-
-# In[1]:
-
+###################################################
 
 user_name = str(input("Please Input your Name: ")) #this code is done for a building in NYC
 print('')
@@ -87,7 +73,7 @@ elif build_type == 'Commercial': #repeated for each type o input to allow option
     elif R1_2 == 'Office Space':
       user_in3 = True
     else:
-      print('Please re-type the input...')  
+      print('Please re-type your input...')  
 elif build_type == 'Industrial': #repeated for each type o input to allow options of all the build types
   user_in4 = False
   while (user_in4 == False):
@@ -98,7 +84,7 @@ elif build_type == 'Industrial': #repeated for each type o input to allow option
     elif R1_2 == 'Heavy Industry':
       user_in4 = True
     else:
-      print('Please re-type the input...')
+      print('Please re-type your input...')
 
 print('')
 sqft = str(input('Approximate square feet of the building to be constructed: ')) #asked the size the user wants the building to be 
@@ -179,9 +165,17 @@ elif R1_2 == 'Heavy Industry': #industrial option
 else:
   pass
 
-timeline = str(input('Would you like to accelerate the timeline from 12 months to 9 months? [Yes or No]: '))
-print('')
-
+user_YN = False
+while (user_YN == False):
+  timeline = str(input('Would you like to accelerate the timeline from 12 months to 9 months? [Yes or No]: '))
+  print('')
+  
+  if timeline == 'Yes':
+    user_YN = True
+  if timeline == 'No':
+    user_YN = True
+  else:
+    print('Please re-type your input...')
 
 user_input = Cost(sqft, USD_sqft_low, USD_sqft_high) #stores ine inputs into the class listed at the beginning
 
@@ -232,8 +226,6 @@ print('will be approximately {} - {}, with a timeline of {}.'.format(USD_tot_low
 #https://www.rsmeans.com/model-pages/restaurant
 #https://ccorpinsights.com/costs-per-square-foot/
 
-
-# In[ ]:
 
 
 
